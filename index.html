@@ -28,7 +28,9 @@
       justify-content: center;
       height: 100vh;
       width: 1440px;
+
     }
+   
 
     .subcontainer {
       display: flex;
@@ -40,9 +42,12 @@
       border-radius: 30px; 
     }
 
-    img{
+    #img-desktop{
       height: 400px;
       border-radius: 3% 0% 0% 3%;
+    }
+    #img-mobile{
+      display: none;
     }
 
     #parrafo{
@@ -50,7 +55,6 @@
       background-color: white;
       padding: 30px;
       border-radius: 0% 3% 3% 0%;
-
     }
     p{
       font-size: 14px;
@@ -87,6 +91,57 @@
       background-color: rgb(49, 99, 80);
     }
     
+    @media (max-width: 375px){
+      .container{
+      display: flex;
+      flex-direction: column;
+      background-color: hsl(30, 38%, 92%);
+      padding: 30px;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .subcontainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      height: 400px;
+      width: 570px;
+      margin:auto;
+      border: 20px;
+      border-radius: 30px; 
+    }
+
+    #img-desktop{
+      display: none;
+    }
+
+    #img-mobile{
+      display: block;
+      width: 364.545px;
+      border-radius: 3% 3% 0% 0%;
+      height: auto;
+    
+    }
+
+    #parrafo{
+      width: 364.545px;
+      background-color: white;
+      border-radius: 0% 0% 3% 3%;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    #precio-actual{
+      margin-right: 20px;
+    }
+
+    button{
+      width: 290px;
+    }
+  }
 
   </style>
 </head>
@@ -95,7 +150,8 @@
     <div class="subcontainer">
 
       <div id="imagen">
-        <img src="/images/image-product-desktop.jpg">
+        <img id="img-desktop" src="/images/image-product-desktop.jpg">
+        <img id="img-mobile" src="/images/image-product-mobile.jpg">
       </div>
   
       <div id="parrafo">
